@@ -1,3 +1,10 @@
+'''Your task is to sort the string  in the following manner:
+
+All sorted lowercase letters are ahead of uppercase letters.
+All sorted uppercase letters are ahead of digits.
+All sorted odd digits are ahead of sorted even digits.
+'''
+
 s='AnamikaSinha1234'
 L=list(s)
 len(L)
@@ -23,4 +30,4 @@ leven=[num for num in l3 if int(num)%2==0 ]
 lodd=[num for num in l3 if int(num)%2!=0 ]
 newl=l2+l1+lodd+leven
 news="".join(newl)
-news
+print(news)
