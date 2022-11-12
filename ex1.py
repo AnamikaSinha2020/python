@@ -5,29 +5,32 @@ All sorted uppercase letters are ahead of digits.
 All sorted odd digits are ahead of sorted even digits.
 '''
 
-s='AnamikaSinha1234'
-L=list(s)
-len(L)
-l1=[]
-l2=[]
-l3=[]
+
+def sort(str):
+    L = list(str)
+    len(L)
+    l_upper = []
+    l_lower = []
+    l_integer = []
+
+    l_upper = [data for data in L if data.isupper()]
+    l_lower = [data for data in L if data.islower()]
+    l_integer = [data for data in L if data not in l_upper and data not in l_lower]
+
+    l_upper.sort()
+    l_lower.sort()
+    l_integer.sort()
+    print(l_upper)
+    print(l_lower)
+    leven = [num for num in l_integer if int(num) % 2 == 0]
+    lodd = [num for num in l_integer if int(num) % 2 != 0]
+    newl = l_lower + l_upper + lodd + leven
+    news = "".join(newl)
+    return news
 
 
-l4=l2+l1+l3
-s2="".join(l4)
-s2
+print("Enter a alphanumeric string")
+str1 = input()
+sorted_String=sort(str1)
+print("Sorted String: "+sorted_String)
 
-l1=[data for data in L if data.isupper()]
-l2=[data for data in L if data.islower()]
-l3=[data for data in L if data not in l1 and data not in l2]
-
-l1.sort()
-l2.sort()
-l3.sort()
-print(l1)
-print(l2)
-leven=[num for num in l3 if int(num)%2==0 ]
-lodd=[num for num in l3 if int(num)%2!=0 ]
-newl=l2+l1+lodd+leven
-news="".join(newl)
-print(news)
