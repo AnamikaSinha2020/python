@@ -12,14 +12,18 @@ for i in range(student):
     name = input()
     score = float(input())
     entered_list.append([name, score])
+
 print(entered_list)
 l1 = []
 for i in range(student):
     marks_list.append(entered_list[i][1])
-marks_list.sort()
-print(marks_list)
+marks_set=set(marks_list)
+unique_marks_list=list(marks_set)
+sorted_marks_list=sorted(unique_marks_list)
+#marks_list.sort()
+#print(marks_list)
 for i in range(student):
-    if entered_list[i][1] == marks_list[1]:
+    if entered_list[i][1] == sorted_marks_list[1]:
         sorted_name.append(entered_list[i][0])
         sorted_name.sort()
     else:
