@@ -34,5 +34,5 @@ print("storing sort the string")
 print("Enter a alphanumeric string:")
 str1 = input()
 sorted_String=sort(str1)
-print("Sorted String value: "+sorted_String)
+print("Sorted String value= "+sorted_String)
 
