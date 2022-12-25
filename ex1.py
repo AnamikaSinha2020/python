@@ -29,7 +29,9 @@ def sort(str):
     return news
 
 
-print("Enter a alphanumeric string")
+print("storing sort the string")
+
+print("Enter a alphanumeric string:")
 str1 = input()
 sorted_String=sort(str1)
 print("Sorted String: "+sorted_String)
