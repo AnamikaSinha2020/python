@@ -13,6 +13,7 @@ class Customer:
 
 class Bank(Customer):
     Card_no = " "
+    
 
     def __init__(self, name, ssn, cardno):
         super().__init__(name, ssn)
