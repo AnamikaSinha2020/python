@@ -1,3 +1,4 @@
+
 class Customer:
     Name = " "
     SSN = " "
@@ -39,7 +40,7 @@ class ATM(Bank):
         self.balance += self.amount
         print(f"current balance", self.balance)
 
-    def withdraw(self, amount):
+     def withdraw(self, amount):
         self.amount = amount
         if self.amount > self.balance:
             print("insufficiant balance")
